@@ -1,1 +1,50 @@
+.contenedorPerfil {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+    // margin: 10px;
+    max-width: 700px;
+    color: #575757;
+    padding: 10px;
+    margin: 0 auto;
+    box-shadow: 8px 7px 12px;
+    border-radius: 10px;
+    background-color: #bebbbb;
 
+    .name-price {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            font-size: 25px;
+            color: black;
+        }
+        h1 {
+            color: black;
+        }
+        p {
+            font-size: 20px;
+            color: black;
+        }
+    }
+    img{
+        width: 100%;
+        max-width: 400px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .contenedorPerfil {
+        flex-direction: column;
+        gap: 35px;
+    }
+}
+@media (max-width: 600px) {
+    .contenedorPerfil {
+        flex-direction: column;
+        gap: 35px;
+    }
+}

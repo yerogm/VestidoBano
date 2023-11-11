@@ -3,6 +3,7 @@ import { db } from "../firebaseConfig/firebase";
 import { collection, doc, getDoc } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import { Params, RopaModel } from "../AppPrincipal/appBaño";
+import "./styles.scss";
 
 const PerfilVestido = () => {
     const vestidoCollection = collection(db, "vestidosDeBano");
@@ -28,33 +29,13 @@ const PerfilVestido = () => {
     }, []);
 
     return (
-        <div
-            style={{
-                backgroundColor: "#bebbbb",
-                margin: "10px",
-                padding: "10px",
-                borderRadius: "10px",
-            }}
-        >
+        <div>
             {ropa ? (
                 <div>
-                    <div
-                        style={{
-                            color: "black",
-                            display: "flex",
-                            gap: "100px",
-                            alignItems: "center",
-                            margin: "0 auto",
-                            maxWidth: "700px",
-                        }}
-                    >
-                        <img src={ropa.image} alt="" style={{borderRadius:"10px"}}/>
-                        <div
-                            style={{ display: "flex", flexDirection: "column" }}
-                        >
-                            <span style={{ fontSize: "20px" }}>
-                                {ropa.name}
-                            </span>
+                    <div className="contenedorPerfil">
+                        <img src={ropa.image} alt="" />
+                        <div className="name-price">
+                            <span>{ropa.name}</span>
 
                             <h1>${ropa.price}</h1>
                             <div
