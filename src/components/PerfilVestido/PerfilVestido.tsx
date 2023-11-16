@@ -17,11 +17,8 @@ const PerfilVestido = () => {
 
             if (docSnap.exists()) {
                 const vestidoActual = docSnap.data() as RopaModel;
-                console.log(params.id, "ESTE ES EL ID DEL DOCUMENTO");
                 setRopa(vestidoActual);
-            } else {
-                console.log("No se ha encontrado ningun elemento");
-            }
+            }  
         } catch {}
     };
     useEffect(() => {
